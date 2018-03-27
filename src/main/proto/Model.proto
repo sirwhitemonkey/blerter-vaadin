@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.blerter.model;
+
+message Id {
+	int64 id = 1;
+}
+
+message Response {
+    int32 responseCode = 1;
+    string info = 2;
+    repeated Health health = 3;
+    bytes data = 4;
+}
+
+message InternalRequest {
+	bytes data = 1;
+}
+
+message Health {
+	int64 id = 1;
+	string name = 2;
+	string description = 3;
+	repeated Safety safety = 4;
+}
+
+message Safety {
+	int64 id = 1;
+	string name = 2;
+	string description = 3;
+	bool isActive = 4;
+}
+
+message Token {
+	string token = 1;
+	string userId = 2;
+}
+
+message Empty {
+}

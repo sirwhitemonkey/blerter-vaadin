@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: blerter-vaadin-service
+Implementation-Version: 1.0
+Built-By: rommelsumpo
+Implementation-Vendor-Id: blerter-vaadin-service
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/blerter-vaadin-service
+Created-By: Maven Integration for Eclipse
+

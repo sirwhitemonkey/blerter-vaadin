@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.blerter.grpc.service;
+import "Model.proto";
+
+
+message Request {
+	com.blerter.model.Id id = 1;
+	com.blerter.model.Token token = 2;
+	com.blerter.model.Health health = 3;
+}
+
+service BlerterService {
+  rpc generateToken(Request) returns (com.blerter.model.Response);
+  rpc checkToken(Request) returns (com.blerter.model.Response);
+  rpc postHealth(Request) returns (com.blerter.model.Response);
+  rpc putHealth(Request) returns (com.blerter.model.Response);
+  rpc deleteHealth(Request) returns (com.blerter.model.Response);
+  rpc getHealth(Request) returns (com.blerter.model.Response);
+  rpc ping(com.blerter.model.Empty) returns (com.blerter.model.Response);
+}
